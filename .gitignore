@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.agents/
+skills-lock.json
+docs/
+INIT.md
+AGENTS.md
