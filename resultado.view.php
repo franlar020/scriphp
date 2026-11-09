@@ -170,18 +170,6 @@ if (!defined('LIQUIDACION_APP')) {
                             </table>
                         </div>
 
-                        <!--
-                            Nota de defensa: la suma de las bonificaciones mostradas
-                            puede diferir en $0,01 del Total de Haberes por redondeo
-                            independiente de cada línea. El total se calcula sobre la
-                            suma exacta y se redondea una sola vez.
-                        -->
-                        <p class="rounding-note">
-                            Los importes parciales se muestran redondeados a 2 decimales. El Total de Haberes
-                            se calcula sobre la suma exacta y se redondea una sola vez, por eso puede diferir
-                            en $0,01 de la suma de las líneas mostradas.
-                        </p>
-
                         <div class="receipt-actions">
                             <a href="index.php" class="btn btn-back">Nueva liquidación</a>
                             <button type="button" class="btn btn-print" id="printButton">

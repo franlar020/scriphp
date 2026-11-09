@@ -1,0 +1,79 @@
+============================================================
+PROMPT UTILIZADO — TP LIQUIDACIÓN DE SUELDOS
+Programación 4 / UNLAR — Ingeniería en Sistemas
+Herramienta de desarrollo: DeepSeek 9B local + Ollama
+============================================================
+
+Armá un trabajo práctico completo de liquidación de sueldos para Programación 4.
+
+CONTEXTO
+
+- Runtime: PHP 8.2 sobre XAMPP con Apache.
+- La interfaz debe usar Bootstrap 5.
+- El sistema debe funcionar en localhost y verse bien en escritorio y mobile.
+- La entrega final debe quedar organizada en cinco archivos:
+  1. index.php: solo HTML del formulario.
+  2. procesar.php: backend PHP puro, sin HTML.
+  3. resultado.view.php: vista HTML del comprobante y del error, con echos cortos.
+  4. assets/css/styles.css: todos los estilos del proyecto.
+  5. assets/js/app.js: JavaScript ES6 para la vista previa del básico y la impresión.
+
+FUNCIONALIDAD
+
+1. index.php debe mostrar un formulario semántico con:
+   - Select de categoría A, B, C o D.
+   - Input numérico de antigüedad, entero entre 1 y 30.
+   - Botón "Calcular Liquidación".
+   - Envío por POST a procesar.php.
+
+2. procesar.php debe:
+   - Rechazar accesos que no sean POST con HTTP 405.
+   - Capturar categoria y antiguedad desde $_POST.
+   - Validar en el servidor que la categoría sea A, B, C o D.
+   - Validar que la antigüedad sea un entero entre 1 y 30.
+   - Responder con HTTP 400 si los datos son inválidos.
+   - Asignar el sueldo básico con match:
+     A = 4050.55
+     B = 3209.20
+     C = 2575.73
+     D = 1812.28
+   - Calcular las bonificaciones sobre el sueldo básico:
+     Antigüedad = básico × 0.10 × años.
+     Presentismo = básico × 0.15.
+     Dedicación especial = básico × 0.50.
+   - Calcular el total de haberes sumando básico + las tres bonificaciones y redondearlo una sola vez a 2 decimales.
+   - Calcular las retenciones sobre el TOTAL DE HABERES, no sobre el básico:
+     Obra social = 5 %.
+     ANSES / Jubilación = 11 %.
+   - Redondear cada retención a 2 decimales antes de sumarlas.
+   - Calcular total_descuentos y restarlo al total de haberes para obtener total_neto.
+   - Delegar toda la salida HTML a resultado.view.php con require_once.
+
+3. resultado.view.php debe:
+   - Mostrar el comprobante con los datos de categoría, antigüedad y fecha.
+   - Mostrar una tabla con sueldo básico, las tres bonificaciones, total haberes, obra social, ANSES, total descuentos y total neto.
+   - Formatear todos los importes con number_format($valor, 2, ',', '.') y el prefijo $ sin espacio.
+   - Escapar todo texto dinámico con una función e() basada en htmlspecialchars.
+   - Mostrar una tarjeta de error con un if y recorrer los mensajes con foreach cuando haya errores.
+   - Incluir un guard con la constante LIQUIDACION_APP para que un acceso directo a resultado.view.php responda 404.
+   - Cargar assets/css/styles.css y assets/js/app.js.
+
+4. assets/js/app.js debe:
+   - Usar sintaxis ES6.
+   - Mostrar el básico de la categoría seleccionada en el elemento #basicoPreview.
+   - Formatear el valor como pesos argentinos.
+   - Conectar el botón #printButton con window.print().
+   - No usar JavaScript inline en los archivos PHP.
+
+5. assets/css/styles.css debe:
+   - Centralizar todos los estilos y no duplicar la paleta entre archivos.
+   - Usar estas variables:
+     --paper: #E9EDF0
+     --surface: #FCFDFC
+     --ink: #15211D
+     --brand: #0B6B4F
+     --brand-dark: #07503B
+     --brand-soft: #E8F3EE
+     --stamp: #B3402A
+     --line: #C9D2CE
+     --muted: #52605A
