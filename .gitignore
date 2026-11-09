@@ -1,11 +1,28 @@
+# Dependencias
 node_modules/
+
+# Documentación local (guía de exposición)
+docs/
+
+# Archivos temporales de Word
+~$*.docx
+*.tmp
+
+# Sistema
 .DS_Store
 Thumbs.db
-*.log
+desktop.ini
+
+# Editores
 .vscode/
 .idea/
+
+# Entorno y logs
+.env
+*.log
+
+# Herramientas locales de agentes
 .agents/
 skills-lock.json
-docs/
 INIT.md
 AGENTS.md
