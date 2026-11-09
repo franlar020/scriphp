@@ -53,7 +53,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
     $errores[] = 'Este procesador solo acepta envíos por POST. Volvé al formulario para calcular una liquidación.';
 } else {
     /* ========================================================
-       FASE 2 · RECEPCIÓN Y SUELDO BÁSICO — Bruno
+       FASE 2 · RECEPCIÓN Y SUELDO BÁSICO —
        ======================================================== */
 
     // Captura de los datos enviados por el formulario.
@@ -94,7 +94,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
         };
 
         /* ====================================================
-           FASE 3 · CÁLCULO DE HABERES — Camila
+           FASE 3 · CÁLCULO DE HABERES —
            ==================================================== */
 
         // Antigüedad: 10% del básico por cada año trabajado.
@@ -117,7 +117,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
         );
 
         /* ====================================================
-           FASE 4 · RETENCIONES Y NETO — Virginia
+           FASE 4 · RETENCIONES Y NETO —
            ==================================================== */
 
         // Las retenciones se calculan sobre el TOTAL DE HABERES, no sobre el básico.

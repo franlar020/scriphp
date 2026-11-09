@@ -6,21 +6,6 @@
     <title>Liquidación de sueldos | Programación 4</title>
 
     <!--
-    ============================================================
-      FASE 1 · INFRAESTRUCTURA, FRONTEND Y FORMULARIO
-      Responsable: Francisco
-      Archivo: index.php
-      Sección: formulario HTML y enlaces a los assets
-
-      Puntos para la defensa:
-      - Bootstrap 5 por CDN y Card centrada.
-      - Formulario semántico con envío POST a procesar.php.
-      - Select de categoría A-D e input numérico de 1 a 30.
-      - CSS y JavaScript separados en assets/ (separación de responsabilidades).
-      - DeepSeek 9B local + Ollama: privacidad, modo offline y control.
-      - PHP centralizado con XAMPP + ngrok para probar en equipo.
-    ============================================================
-    -->
 
     <!-- FASE 1 · Bootstrap 5 por CDN -->
     <link
