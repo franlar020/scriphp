@@ -40,7 +40,7 @@
                             <header class="mb-4">
                                 <div class="d-flex align-items-start justify-content-between gap-3 mb-4">
                                     <div class="brand-mark" aria-hidden="true">L</div>
-                                    <span class="project-badge">TP Programación 4</span>
+                                    <span class="project-badge">TP 1 | Programación 4</span>
                                 </div>
 
                                 <h1 id="tituloLiquidacion" class="display-title mb-2">
@@ -120,7 +120,7 @@
 
                             <footer class="form-footer">
                                 <span>Los importes se muestran en pesos argentinos.</span>
-                                <span>Programación 4 / UNLAR</span>
+                                <span>TP 1 | Programación 4 / UNLAR</span>
                             </footer>
                         </div>
                     </section>
