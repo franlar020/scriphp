@@ -1,6 +1,6 @@
 <?php
 /**
- * FASE 4 · Vista del comprobante y del estado de error — Virginia.
+ * FASE 4 · Vista del comprobante y del estado de error —.
  * Solo se carga desde procesar.php.
  */
 if (!defined('LIQUIDACION_APP')) {
