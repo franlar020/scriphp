@@ -248,8 +248,6 @@ DeepSeek 9B local, Ollama y ngrok se usaron como **contexto de desarrollo/demo**
 ## Documentación adicional
 
 - `PROMPT.txt`: prompt utilizado en el desarrollo asistido.
-- `docs/Guia_Explicacion_TP_Liquidacion.docx`: guía de exposición con bloques de código y rangos de líneas exactos. Es un archivo local e ignorado por Git.
-- `AGENTS.md`: instrucciones locales para agentes de código. También ignorado por Git.
 
 ## Solución de problemas
 
