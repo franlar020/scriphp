@@ -53,7 +53,7 @@
 
                             <!--
                                 El formulario se envía por POST a procesar.php.
-                                No usamos GET porque los datos no deben viajar en la URL.
+                                No usamos GET porque los datos de categoría y antiguedad no deben viajar en la URL.
                             -->
                             <form action="procesar.php" method="post" class="row g-4" id="liquidacionForm">
                                 <!-- FASE 1 · Select de categoría -->
